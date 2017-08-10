@@ -15,7 +15,7 @@ import shiftCipher.decrypt;
 
 /**
  *
- * @author Dipen
+ * @author SumitG
  */
 
 //this code is for decode the message.. to retrieve the message from the image
