@@ -5,21 +5,32 @@
  */
 package gui;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 
 /**
  *
+<<<<<<< HEAD
  * @author SumitG
+=======
+ * @author Dipen
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
  */
 public class startFrame {
 
     JFrame f1;
     JButton b1, b2;
 
+<<<<<<< HEAD
     public startFrame() {
+=======
+    startFrame() {
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         f1 = new JFrame("Image Steganography");
         f1.setSize(350, 400);
         f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,6 +38,7 @@ public class startFrame {
         f1.setLayout(null);
 
         f1.setUndecorated(true);
+<<<<<<< HEAD
 
         f1.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
 
@@ -35,6 +47,14 @@ public class startFrame {
         
         MenuBar addMenu = new MenuBar();
         f1.setJMenuBar(addMenu.menubar);
+=======
+//    f1.getRootPane().setWindowDecorationStyle(JRootPane.WARNING_DIALOG);
+        f1.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+//    f1.setBackground(new Color(0.9f,0.9f,0.9f,0.85f));
+        f1.setBackground(new Color(0.427f, 0.651f, 0.929f, 0.85f));
+        f1.setLocationRelativeTo(null);
+//        panel1.setOpaque(false);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
         b1 = new JButton("Encode");
         b1.setBounds(100, 50, 150, 90);

@@ -16,14 +16,21 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+<<<<<<< HEAD
 import javax.swing.filechooser.FileFilter;
+=======
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 import javax.swing.filechooser.FileNameExtensionFilter;
 import lsb.encode;
 import shiftCipher.encrypt;
 
 /**
  *
+<<<<<<< HEAD
  * @author SumitG
+=======
+ * @author Dipen
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
  */
 public class encodeFrame implements ActionListener {
 
@@ -36,11 +43,17 @@ public class encodeFrame implements ActionListener {
     JButton bok, bcn;
     JPasswordField psw;
     JTextArea t1, tmp;
+<<<<<<< HEAD
 
     JTextField tf1, tkey;
     JTextField tfk;
     JPanel panel1, mp, panelKey;
     JScrollPane scp, scArea;
+=======
+    JTextField tf1, tkey, tfk;
+    JPanel panel1, mp, panelKey;
+    JScrollPane scp;
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
     JDialog jd;
     File f;
     JPopupMenu jpop;
@@ -61,17 +74,27 @@ public class encodeFrame implements ActionListener {
         fk = new JInternalFrame("Enter the key");
         fk.setPreferredSize(new Dimension(200, 100));//Size(400,200);
         fk.setBounds(50, 100, 200, 100);
+<<<<<<< HEAD
 
         f1.setUndecorated(true);
 
+=======
+//        fk.setUndecorated(true);
+
+        f1.setUndecorated(true);
+//    f1.getRootPane().setWindowDecorationStyle(JRootPane.WARNING_DIALOG);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         f1.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         f1.setBackground(new Color(0.9f, 0.9f, 0.9f, 0.85f));
         f1.setBackground(new Color(0.427f, 0.651f, 0.929f, 0.85f));
         f1.setLocationRelativeTo(null);
+<<<<<<< HEAD
 
         MenuBar addMenu = new MenuBar();
         f1.setJMenuBar(addMenu.menubar);
         
+=======
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         panel1.setOpaque(false);
 
         l1 = new JLabel("Image Preview");
@@ -79,6 +102,10 @@ public class encodeFrame implements ActionListener {
 
         scp = new JScrollPane();
         scp.setBounds(10, 35, 390, 280);
+<<<<<<< HEAD
+=======
+//        imagePreview.setBounds(10,35,390,280);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
         browse = new JButton("Browse Image");
         browse.setBounds(360, 65, 121, 25);
@@ -91,6 +118,7 @@ public class encodeFrame implements ActionListener {
         JSeparator sp = new JSeparator(SwingConstants.HORIZONTAL);
         sp.setBounds(10, 265, 520, 25);
 
+<<<<<<< HEAD
         t1 = new JTextArea();
         t1.setOpaque(false);
         t1.setLineWrap(true);
@@ -109,10 +137,30 @@ public class encodeFrame implements ActionListener {
         b2 = new JButton("Cancel");
         b2.setBounds(350, 520, 80, 25);
 
+=======
+//        l2=new JLabel("Message");
+//        l2.setBounds(10,305,80,25);
+        t1 = new JTextArea();
+        t1.setBorder(BorderFactory.createTitledBorder("Message to Embed"));
+        t1.setBounds(10, 275, 520, 200);
+
+        b1 = new JButton("Encrypt");
+        b1.setBounds(150, 555, 80, 25);
+
+        back = new JButton("Back");
+        back.setBounds(250, 555, 80, 25);
+
+        b2 = new JButton("Cancel");
+        b2.setBounds(350, 555, 80, 25);
+
+//        l3=new JLabel("Larger Preview",JLabel.CENTER);        
+//        l3.setBounds(410,100,120,25);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         preview = new JButton("Image Preview");
         preview.setEnabled(false);
         preview.setBounds(200, 200, 121, 40);
 
+<<<<<<< HEAD
         psw = new JPasswordField();
 
         panel1.add(tf1);
@@ -120,13 +168,39 @@ public class encodeFrame implements ActionListener {
 
         panel1.add(sp);
         panel1.add(scArea);
+=======
+//        lkey =new JLabel("Enter the Key");
+//        lkey.setBounds(20,500,90,25);
+//        
+//        tkey = new JTextField();
+//        tkey.setBounds(130,500,100,25);
+        psw = new JPasswordField();
+
+        // fk.add(lkey);
+        //fk.add(tkey);
+        //panel1.add(l1);
+        //panel1.add(scp); 
+        panel1.add(tf1);
+        panel1.add(browse);
+
+        panel1.add(sp); //panel1.add(l3);
+        panel1.add(t1);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         panel1.add(preview);
         panel1.add(b1);
         panel1.add(b2);
         panel1.add(back);
+<<<<<<< HEAD
 
         panelKey = new JPanel(null);
 
+=======
+//        panel1.add(lkey); 
+//        panel1.add(tkey);
+
+        panelKey = new JPanel(null);
+//        panelKey.setOpaque(false);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         panelKey.setBackground(new Color(0.427f, 0.651f, 0.929f, 0.85f));
         jl = new JLabel("Enter the key");
         tfk = new JTextField();
@@ -145,6 +219,14 @@ public class encodeFrame implements ActionListener {
         bcn.setBounds(180, 50, 80, 25);
         panelKey.add(bcn);
 
+<<<<<<< HEAD
+=======
+//        panelKey.add(tkey);
+//        
+//        jpop=new JPopupMenu();
+//        jpop.add(panelKey);
+//        panelKey.add(tkey);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         browse.addActionListener(this);
         b1.addActionListener(this);
         b2.addActionListener(this);
@@ -152,6 +234,7 @@ public class encodeFrame implements ActionListener {
         bok.addActionListener(this);
         bcn.addActionListener(this);
         preview.addActionListener(this);
+<<<<<<< HEAD
 
         t1.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
@@ -163,6 +246,8 @@ public class encodeFrame implements ActionListener {
             }
         });
 
+=======
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         tfk.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 char input = e.getKeyChar();
@@ -184,7 +269,13 @@ public class encodeFrame implements ActionListener {
 
     }
 
+<<<<<<< HEAD
     
+=======
+    public static void main(String[] args) {
+        new encodeFrame();
+    }
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
     public void actionPerformed(ActionEvent e) {
 
@@ -192,6 +283,7 @@ public class encodeFrame implements ActionListener {
         if (e.getSource() == browse) {
             JFileChooser fc = new JFileChooser("Open an image");
 
+<<<<<<< HEAD
             fc.setAcceptAllFileFilterUsed(false);
 
             FileNameExtensionFilter filter = new FileNameExtensionFilter("Images(*.jpg , *.png)", "png", "jpg", "bmp");
@@ -229,11 +321,26 @@ public class encodeFrame implements ActionListener {
                     Logger.getLogger(encodeFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
+=======
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Images(*.jpg , *.png)", "png", "jpg","bmp");
+            fc.setFileFilter(filter);
+            
+            if (fc.showOpenDialog(f1) == fc.APPROVE_OPTION) {
+//                preview=new JButton("Larger Preview");
+//                preview.setBounds(410,100,120,25);  
+                preview.setEnabled(true);
+
+                // System.out.println(ppp);
+                //f=new File(ppp);
+                f = fc.getSelectedFile();
+
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
                 imagePreview = new JLabel(new ImageIcon(f.getPath()));
 
                 scp.getViewport().add(imagePreview);
 
                 tf1.setText(f.toString());
+<<<<<<< HEAD
 
             }
 
@@ -253,6 +360,36 @@ public class encodeFrame implements ActionListener {
                 jd.setResizable(false);
                 jd.setVisible(true);
             }
+=======
+//                preview.addActionListener(this);
+                //panel1.add(preview);
+            }
+
+        } else if (e.getSource() == b1) {
+//            fk.setVisible(true);
+//            f1.setContentPane(fk);
+
+//            f1.add(fk);
+            jd = new JDialog(f1, "Key for Encryption process", true);
+            jd.setSize(350, 130);
+            jd.getContentPane().add(panelKey);
+            jd.setLocationRelativeTo(f1);
+//            jd.setUndecorated(true);
+//    f1.getRootPane().setWindowDecorationStyle(JRootPane.WARNING_DIALOG);
+//            jd.getRootPane().setWindowDecorationStyle(JRootPane.PLAIN_DIALOG);
+            //jd.setBackground(new Color(0.9f,0.9f,0.9f,0.85f));
+//            jd.setBackground(new Color(0.427f, 0.651f, 0.929f,0.85f));
+            jd.setResizable(false);
+            jd.setVisible(true);
+//            fk.setBounds(50, 200, 100, 100);
+//            JOptionPane jp = new JOptionPane();
+//            String kkk="key";
+//            String k= JOptionPane.showInternalInputDialog(dp, "Enter key", kkk, 0);
+//            int key = Integer.parseInt(tkey.getText());
+//            new encrypt(f,t1.getText(),key);
+
+            //then pop up the encryption progress
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         } else if (e.getSource() == preview) {
             try {
                 Desktop dt = Desktop.getDesktop();
@@ -268,6 +405,7 @@ public class encodeFrame implements ActionListener {
                 JOptionPane.showMessageDialog(panelKey, "Key must be of min. size of 4 and max. size of 8");
             } else {
                 int key = Integer.parseInt(keyString);
+<<<<<<< HEAD
                 jd.dispose();
                 String fileSavePath = fileSaver();
                 try {
@@ -275,6 +413,9 @@ public class encodeFrame implements ActionListener {
                 } catch (Exception ex) {
                     System.out.println(ex);
                 }
+=======
+                new encrypt(f, messageToEncrypt, key);
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
             }
 
@@ -289,6 +430,7 @@ public class encodeFrame implements ActionListener {
         }
     }
 
+<<<<<<< HEAD
    
 
     public String fileSaver() {
@@ -329,6 +471,9 @@ public class encodeFrame implements ActionListener {
         }
 
         return filePath;
+=======
+    public void success() {
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
     }
 }

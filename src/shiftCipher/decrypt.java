@@ -1,11 +1,15 @@
 package shiftCipher;
 
+<<<<<<< HEAD
 import gui.startFrame;
 import java.awt.Desktop;
 import java.io.File;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import lsb.decode;
+=======
+import javax.swing.JOptionPane;
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
 
 /*
@@ -15,9 +19,23 @@ import lsb.decode;
  */
 /**
  *
+<<<<<<< HEAD
  * @author SumitG
  */
 
+=======
+ * @author Dipen
+ */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author Dipen
+ */
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 public class decrypt {
 
     int xx, yy, mid;
@@ -25,6 +43,7 @@ public class decrypt {
     int shiftKey;
     String message;// = "<;DHK_WQNBL";
     String cipherText = "", operatedText = "";
+<<<<<<< HEAD
 
 
     public decrypt() {
@@ -39,6 +58,14 @@ public class decrypt {
 
     }
 
+=======
+    public decrypt(){}
+    public decrypt(String message,int key){
+        String decryptedMessage="";
+        decryptedMessage = decryptProcess(message,key);
+        JOptionPane.showMessageDialog(null, decryptedMessage);
+    }
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
     public String applyShift(String text, int shift) {
         char[] chars = text.toCharArray();
         for (int i = 0; i < text.length(); i++) {
@@ -130,6 +157,11 @@ public class decrypt {
         operatedText = performOperation(message, yy);
 
         cipherText = applyShift(operatedText, shiftKey);
+<<<<<<< HEAD
+=======
+        
+        
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 
         shiftKey = calculateKey(key, 2);
 
@@ -137,6 +169,11 @@ public class decrypt {
 
         cipherText = applyShift(operatedText, shiftKey);
 
+<<<<<<< HEAD
+=======
+        
+        
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
         shiftKey = calculateKey(key, 1);
 
         operatedText = performOperation(cipherText, xx);
@@ -147,4 +184,12 @@ public class decrypt {
 
     }
 
+<<<<<<< HEAD
+=======
+    public static void main(String[] args) {
+//
+//        decrypt oba = new decrypt();
+//        System.out.println(oba.decrypt("{;DHK_'QK:g6dPVNbY", 1234));
+    }
+>>>>>>> 526bf91e031cade1495973d8df837ebaab7cd250
 }
