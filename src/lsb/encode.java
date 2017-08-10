@@ -16,7 +16,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Dipen
+ * @author SumitG
  */
 public final class encode {
     public encode(){}
