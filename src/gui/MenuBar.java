@@ -9,7 +9,7 @@ import javax.swing.*;
 
 /**
  *
- * @author C-Dhant
+ * @author SumitG
  */
 import java.awt.*;
 import java.awt.event.*;
