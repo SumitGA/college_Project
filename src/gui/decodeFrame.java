@@ -18,7 +18,7 @@ import shiftCipher.encrypt;
 
 /**
  *
- * @author Dipen
+ * @author SumitG
  */
 public class decodeFrame implements ActionListener{
     JFrame f1;
